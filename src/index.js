@@ -14,7 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  console.log("runn");
+  // console.log("runn");
+  res.status(200).send({
+    message: "app is running",
+  });
 });
 
 app.use("/api/v1/user", UserRouter);
